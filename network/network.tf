@@ -31,7 +31,7 @@ resource "ibm_subnet" "public_subnet" {
 resource "ibm_network_vlan" "vlan_private" {
    name = "3tier_private"
    datacenter = "${var.datacenter}"
-   type = "PUBLIC"
+   type = "PRIVATE"
    subnet_size = 8
    router_hostname = "${var.private_router}"
 }
@@ -41,7 +41,7 @@ resource "ibm_subnet" "apptier_subnet1" {
   private = true
   ip_version = 4
   capacity = 8
-  vlan_id = ${ibm_network_vlan.vlan_private.id"}
+  vlan_id = "${ibm_network_vlan.vlan_private.id}"
   notes = "portable_private_web__subnet"
 }
 
@@ -50,7 +50,7 @@ resource "ibm_subnet" "apptier_subnet2" {
   private = true
   ip_version = 4
   capacity = 8
-  vlan_id = ${ibm_network_vlan.vlan_private.id"}
+  vlan_id = "${ibm_network_vlan.vlan_private.id}"
   notes = "portable_private_APP__subnet"
 }
 
@@ -59,15 +59,15 @@ resource "ibm_subnet" "apptier_subnet2" {
 ##################################################
 
 variable "datacenter" {
-  default = "dal06"
+  default = "dal13"
   description = "the data center to deploy the VLAN."
 }
 variable "public_router" {
-  default = "fcr01a.dal06"
+  default = "fcr01a.dal13"
   description = "the router to use for the public VLAN."
 }
 variable "private_router" {
-  default = "bcr01a.dal06"
+  default = "bcr01a.dal13"
   description = "the router to use for the private VLAN."
 }
 ##################################################
