@@ -57,15 +57,15 @@ module "datatier" {
 
 
 variable "datacenter" {
-  default = "dal06"
+  default = "dal13"
   description = "the data center to deploy the VLAN."
 }
 variable "public_router" {
-  default = "fcr01a.dal06"
+  default = "fcr01a.dal13"
   description = "the router to use for the public VLAN."
 }
 variable "private_router" {
-  default = "bcr01a.dal06"
+  default = "bcr01a.dal13"
   description = "the router to use for the private VLAN."
 }
 variable "network_location" {
@@ -85,7 +85,7 @@ variable "vsi_location" {
   description = "the vsi module location"
 }
 variable "data_location" {
-  default = "https://github.com/bashansh/3T_SL/data"
+  default = "https://github.com/bashansh/3T_SL/tree/master/data"
   description = "the data module location"
 }
 #####################################################
