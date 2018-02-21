@@ -69,23 +69,23 @@ variable "private_router" {
   description = "the router to use for the private VLAN."
 }
 variable "network_location" {
-  default = "https://github.ibm.com/pbahrs/iaas_ref_architectures/new/master/terraform/ClassicSoftLayer/3-tier/prototype/network"
+  default = "https://github.com/bashansh/3T_SL/network"
   description = "the network module location"
 }
 variable "security_location" {
-  default = "https://github.ibm.com/pbahrs/iaas_ref_architectures/new/master/terraform/ClassicSoftLayer/3-tier/prototype/security"
+  default = "https://github.com/bashansh/3T_SL/security"
   description = "the security module location"
 }
 variable "storage_location" {
-  default = "https://github.ibm.com/pbahrs/iaas_ref_architectures/new/master/terraform/ClassicSoftLayer/3-tier/prototype/storage"
+  default = "https://github.com/bashansh/3T_SL/storage"
   description = "the storage module location"
 }
 variable "vsi_location" {
-  default = "https://github.ibm.com/pbahrs/iaas_ref_architectures/new/master/terraform/ClassicSoftLayer/3-tier/prototype/vsi"
+  default = "https://github.com/bashansh/3T_SL/vsi"
   description = "the vsi module location"
 }
 variable "data_location" {
-  default = "https://github.ibm.com/pbahrs/iaas_ref_architectures/new/master/terraform/ClassicSoftLayer/3-tier/prototype/data"
+  default = "https://github.com/bashansh/3T_SL/data"
   description = "the data module location"
 }
 #####################################################
