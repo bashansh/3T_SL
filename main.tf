@@ -8,9 +8,9 @@
 
 module "network" {
   source = "${var.network_location}"
-  datacenter = ${var.datacenter}"
-  public_router = ${var.public_router}
-  private_router = ${var.private_router} 
+  datacenter = "${var.datacenter}"
+  public_router = "${var.public_router}"
+  private_router = "${var.private_router}" 
 }
 
 #####################################################
@@ -20,7 +20,7 @@ module "network" {
 
 #module "security" {
 #  source = "${var.security_location}"
-#  datacenter = ${var.datacenter}"
+#  datacenter = "${var.datacenter}"
 #}
 
 #####################################################
@@ -28,28 +28,28 @@ module "network" {
 #####################################################
 module "storage" {
   source = "${var.storage_location}"
-  datacenter = ${var.datacenter}"
+  datacenter = "${var.datacenter}"
 }
 #####################################################
 # Create webtier
 #####################################################
 module "webtier" {
   source = "${var.vsi_location}"
-  datacenter = ${var.datacenter}"
+  datacenter = "${var.datacenter}"
 }
 #####################################################
 # Create apptier
 #####################################################
 module "apptier" {
   source = "${var.vsi_location}"
-  datacenter = ${var.datacenter}"
+  datacenter = "${var.datacenter}"
 }
 #####################################################
 # Create data (service) tier
 #####################################################
 module "datatier" {
   source = "${var.data_location}"
-  datacenter = ${var.datacenter}"
+  datacenter = "${var.datacenter}"
 }
 #####################################################
 # Variables
