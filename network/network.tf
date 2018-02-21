@@ -19,7 +19,7 @@ resource "ibm_subnet" "public_subnet" {
   private = false
   ip_version = 4
   capacity = 8
-  vlan_id = ${ibm_network_vlan.vlan_public.id"}
+  vlan_id = "${ibm_network_vlan.vlan_public.id}"
   notes = "portable_public_subnet"
 }
 
