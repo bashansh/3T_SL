@@ -69,23 +69,23 @@ variable "private_router" {
   description = "the router to use for the private VLAN."
 }
 variable "network_location" {
-  default = "https://github.com/bashansh/3T_SL/tree/master/network"
+  default = "https://github.com/bashansh/3T_SL//network"
   description = "the network module location"
 }
 variable "security_location" {
-  default = "https://github.com/bashansh/3T_SL/tree/master/security"
+  default = "https://github.com/bashansh/3T_SL//security"
   description = "the security module location"
 }
 variable "storage_location" {
-  default = "https://github.com/bashansh/3T_SL/tree/master/storage"
+  default = "https://github.com/bashansh/3T_SL//storage"
   description = "the storage module location"
 }
 variable "vsi_location" {
-  default = "https://github.com/bashansh/3T_SL/tree/master/vsi"
+  default = "https://github.com/bashansh/3T_SL//vsi"
   description = "the vsi module location"
 }
 variable "data_location" {
-  default = "https://github.com/bashansh/3T_SL/tree/master/data"
+  default = "https://github.com/bashansh/3T_SL//data"
   description = "the data module location"
 }
 #####################################################
